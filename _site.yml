@@ -1,0 +1,13 @@
+name: "Un website test"
+navbar:
+  title: "Un site web test"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "A propos"
+      href: about.html
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
