@@ -1,0 +1,136 @@
+---
+title: "Introduction au logiciel R"
+author: "Dr Mamadou Ciss"
+date: "10 octobre 2018"
+output:
+  github_document:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Environnement de travail
+
+### Connaitre son répertoire de travail actuel
+```
+getwd()
+```
+
+### Changer de répertoire de travail
+````{r}
+setwd("C:/Users/hp/Google Drive/ISRA/Formation/Dispensees/R/Test_Rmarkdown")
+```
+
+## Les packages sous R
+
+### Installation de package
+```
+install.packages('ggplot2')
+```
+
+### Téléchargement de package
+```
+library('ggplot2')
+```
+
+
+
+## Importation de données
+
+### Données texte simple 
+
+```{r}
+myfile<-read.table("pheno.txt",h=T,dec=".")
+```
+
+
+
+### Données au format CSV
+
+
+## Représentation de données sous R
+
+### Entête d'un fichier
+
+```{r}
+head(myfile)
+```
+
+### Fin d'un fichier
+
+```{r}
+tail(myfile)
+```
+
+
+## Statistiques basiques d'une base données
+### Taille d'un fichier
+
+```{r}
+dim(myfile)
+```
+
+```{r}
+names(myfile)
+colnames(myfile)
+```
+
+
+### Nombre de lignes d'un fichier
+```{r}
+nrow(myfile)
+```
+
+### Nombre de colonnes d'un fichier
+```{r}
+ncol(myfile)
+```
+
+
+### Longueur d'un vecteur
+```{r}
+length(myfile$Poids_sec)
+```
+
+### Sommaire de la base de données
+
+```{r}
+summary(myfile)
+```
+
+
+### Minimum d'un vecteur
+```{r}
+min(myfile$Poids_graines)
+```
+
+### Moyenne d'un vecteur
+```{r}
+mean(myfile$Nb_involucres)
+```
+
+### Maximum d'un vecteur
+```{r}
+max(myfile$Floraison)
+```
+
+### Somme d'un vecteur
+```{r}
+sum(myfile$Poids_graines)
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
